@@ -67,20 +67,6 @@ public class Assignment_EnemyDetector : MonoBehaviour
     private bool IsDetected(Transform enemy)
     {
         // TODO
-
-        Vector3 dist = enemy.position - transform.position;
-
-        float distance = dist.magnitude;
-
-        float angle = Vector3.Dot(transform.forward, dist.normalized);
-        
-        angle = Mathf.Acos(angle) * Mathf.Rad2Deg;
-
-        if(distance < detectionRange && angle < detectionFOV / 2)
-        {
-            return true;
-        }
-
         return false;
     }
 

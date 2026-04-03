@@ -38,18 +38,6 @@ public class DiagonalMoveFix : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         // TODO
-        Vector3 moveDirection = new Vector3(h, 0f, v);
-
-        if(useNormalized)
-            moveDirection.Normalize(); // 값을 아예 변화시키는 메소드.
-
-
-
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
-
-        currentInputDirection = moveDirection;
-        currentInputMagnitude = moveDirection.magnitude;
-        currentSpeed = moveDirection.magnitude * moveSpeed;
 
         UpdateUI();
     }

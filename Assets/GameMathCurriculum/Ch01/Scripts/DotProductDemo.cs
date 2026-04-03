@@ -67,19 +67,7 @@ public class DotProductDemo : MonoBehaviour
     private bool CheckInSight(Transform targetTransform)
     {
         // TODO
-        Vector3 toTarget = targetTransform.position - transform.position;
-        if(toTarget.magnitude < viewDistance)
-            return false;
-
-        Vector3 toTargetNormal = toTarget.normalized;
-        dotProductValue = Vector3.Dot(toTargetNormal, transform.forward);
-        angleBetween = Mathf.Acos(dotProductValue) * Mathf.Rad2Deg;
-
-        // fov 의 절반만 사용해야함
-        float halfFovCos = Mathf.Cos(fieldOfView * 0.5f * Mathf.Deg2Rad);
-
-
-        return dotProductValue > halfFovCos;
+        return false;
     }
 
     private void OnDrawGizmos()

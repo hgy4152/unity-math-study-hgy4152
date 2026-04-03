@@ -43,7 +43,7 @@ public class VectorBasics : MonoBehaviour
         PrintVectorOperations();
     }
 
-    private void OnValidate() // 에디터 상태일 때도 작동하게 해줌
+    private void OnValidate()
     {
         PrintVectorOperations();
     }
@@ -51,9 +51,9 @@ public class VectorBasics : MonoBehaviour
     private void PrintVectorOperations()
     {
         // TODO
-        sum = vectorA + vectorB;
-        diff = vectorA - vectorB;
-        scaled = scalar * vectorA;
+        sum = Vector3.zero;
+        diff = Vector3.zero;
+        scaled = Vector3.zero;
 
         Debug.Log($"[VectorBasics] A = {vectorA}, B = {vectorB}");
         Debug.Log($"  덧셈  A + B = {sum}  (크기: {sum.magnitude:F2})");

@@ -59,27 +59,7 @@ public class CrossProductDemo : MonoBehaviour
     private string CheckLeftOrRight(Transform targetTransform)
     {
         // TODO
-
-        Vector3 toTarget = targetTransform.position - transform.position;
-        toTarget.y = 0f;
-
-        crossProduct = Vector3.Cross(transform.forward, toTarget); // 교환법칙 성립 안함
-
-        crossY = crossProduct.y;
-
-        float threshold = 0.1f;
-
-        if (crossY > threshold)
-        {
-            return "오른쪽";
-        }
-        else if(crossY < -threshold)
-        {
-            return "왼쪽";
-        }
-
-
-        return "정면/후면";
+        return "";
     }
 
     private void OnDrawGizmos()
